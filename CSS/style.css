@@ -1,0 +1,90 @@
+/*<::::::DISPOSICION::::::>*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1.7fr 1.6fr 0.4fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 18em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "NavBar"
+    "Mid"
+    "Cards"
+    "Footer";
+}
+/*<::::::NAVBAR::::::>*/
+.NavBar {
+  grid-area: NavBar;
+}
+.Nav-Bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.Mid {
+  grid-area: Mid;
+}
+
+.Cards {
+  grid-area: Cards;
+}
+
+.Footer {
+  grid-area: Footer;
+}
+/*<::::::SLIDER::::::>*/
+.carousel-inner {
+  box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #000000 2px;
+}
+/*<::::::RESPONSIVE ::::::>*/
+@media screen and (min-width: 992.01px) {
+  .nav-item:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 992.01px) {
+  .Cards {
+    flex-wrap: wrap;
+  }
+}
+/*<::::::BACKGROUND::::::>*/
+body {
+  background: url(../Imagenes/Fondo/anton-y-bjqTUUw2Q-unsplash\ 12.png);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: solid #0c8018 20px;
+  width: 100%;
+}
+/*<::::::CARTAS - INICIO::::::>*/
+.Cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #000000 2px;
+}
+.redes_card {
+  display: flex;
+  width: 30px;
+  height: 40px;
+  align-items: center;
+}
+/*<::::::FOOTER - GENERAL::::::>*/
+footer {
+  background-color: rgba(202, 240, 212, 0.53);
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 10px;
+}
